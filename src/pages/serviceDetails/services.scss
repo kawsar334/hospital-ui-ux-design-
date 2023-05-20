@@ -1,0 +1,35 @@
+
+
+@import "../../global.scss";
+
+
+.service_details{
+    .s_d_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        @include mobile{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .left{
+            flex: 1;
+            p{
+                text-align: center;
+                margin: 10px auto;
+                font-size: 25px;
+                color: $maincolor;
+            }
+            img{
+                width: 100%;
+                height: 90vh;
+                object-fit:cover;
+            }
+        }
+        .right{
+            flex: 1.2;
+        }
+    }
+}

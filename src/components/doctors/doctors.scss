@@ -1,0 +1,101 @@
+
+@import "../../global.scss";
+
+.dorctors{
+    width: 100%;
+    margin: 20px 10px;
+
+    h1{
+        text-align: center;
+        font-size: 35px;
+        cursor: pointer;
+        margin: 5px 0px ;
+       color: $maincolor;
+
+        
+
+    }
+    .doctorswrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        .doctorsitem{
+            width: 300px;
+            height: 350px;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;  
+            cursor: pointer;
+            border: 1px solid lightgray;
+            transition: 1s ease all;
+            margin-bottom: 10px;
+            border-bottom: 5px solid $teal;
+            border-top: 5px solid $maincolor;
+            &:hover{
+                transform: scale(1.1);
+                z-index: 2;
+                border: 1px solid $teal;
+              
+            }
+            @include mobile{
+                width: 48%;
+            }          
+            .doctorImg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .doctorcontent{
+                position: absolute;
+                bottom: 0;
+                // background-color:rgba(255, 255,255,0.3);
+                background-color: rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 5px ;
+                text-transform: capitalize;
+                color: rgb(102, 9, 195);
+                .name{
+                    font-size: 16px;
+                    font-weight: 600;
+                    // color: $teal;
+                }
+                .cat{
+                    color: $gray;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                }
+
+                p{
+                    font-size: 13px;
+                    @include mobile{    
+                        
+                    }
+                }
+                .seemorebtn{
+                    border: 1px solid $maincolor;
+                    padding: 5px 10px;
+                    width: max-content;
+                    align-self: center;
+                    border-radius: 30px;
+                    margin: 5px ;
+
+                    &:hover{
+                        background-color: $maincolor;
+                        color: $white;
+
+                    }
+                }
+            }
+        }
+
+    }
+}

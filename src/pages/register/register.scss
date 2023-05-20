@@ -1,0 +1,93 @@
+
+@import "../../global.scss";
+
+
+.register{
+
+
+    .registerwrapper{
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+           box-shadow: $shadow;
+            padding: 20px 0px;
+            border-radius: 10px;
+            h1{
+                font-size: 30px;
+                margin: 10px;
+                color: $maincolor;
+            }
+            @include mobile {
+                    width: 100%;
+                    background-color: $glass;
+                    margin: 0;
+                    box-shadow: none;
+
+                }
+            form{
+                width: 30vw;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                @include mobile{
+                    width: 90%;
+                }
+                .formItem{
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .inputitem{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 10px;
+                        width: 100%;
+                        input{
+                            width: 100%;
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            outline: none;
+                            border: $border;
+                            text-transform: capitalize;
+                            color: $maincolor;
+                        }
+                        label{
+                            color: $gray;
+                            font-weight: 600;
+                        }
+                        button{
+                            padding: 5px 10px;
+                            border: 1px solid $maincolor;
+                            color: $white;
+                            background-color: $maincolor;
+                            margin-bottom: 10px;
+                            width: max-content;
+                            align-self: center !important;
+                            border-radius: 20px;
+                            &:hover{
+                                background-color: transparent;
+                                color: $maincolor;
+                            }
+
+                        }
+                    }
+                }
+            }
+            p{
+                font-size: 18px;
+                color: $maincolor;
+                a{
+                    font-weight: 700;
+                }
+            }
+    }
+}

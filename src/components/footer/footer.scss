@@ -1,0 +1,75 @@
+
+
+@import "../../global.scss";
+
+.footer{
+    background-color:$gray;
+    background-color: $rgb;
+    color: $maincolor;
+    .footerwrapper{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 30px;
+        @include mobile{
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .footerfirst{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            h2{
+                color: black;
+                text-transform: capitalize;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            span{
+                color: $maincolor;
+            }
+        }
+        .footersecond{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            h2 {
+                    color: black;
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+        }
+        
+        .footerlast{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            text-transform: capitalize;
+           .socialicons{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+            a{
+                padding: 5px;
+                font-size: 30px;
+                border-radius: 5px;
+            }
+           }
+        }
+    }
+}

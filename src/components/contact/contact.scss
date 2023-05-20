@@ -1,0 +1,140 @@
+@import "../../global.scss";
+
+.contact {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    .socialmedialinks{
+        position: absolute;
+        left: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        @include mobile{
+            left: 10px;
+        }
+        .socialitem{
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            padding: 10px ;
+            gap: 10px;
+            transition: 0.5s all ease;
+            border:1px solid $maincolor;
+            background-color: $maincolor;
+            color: $white;
+            @include mobile{
+                
+            }
+            &:hover{
+                background-color: transparent;
+                color: $maincolor;
+            }
+            span{
+                opacity: 0;
+                transition:0.5s  all ease;
+                color: $maincolor;
+                display: none;
+                @include mobile{
+                    display: none;
+                }
+                
+            }
+            
+        }
+        
+    }
+    h1{
+        margin: 10px ;
+        color: $maincolor;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $glass;
+            border:$border;
+            
+        }
+    }
+@include mobile {
+    width: 100%;
+    }
+    .contactwrapper {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        flex-direction: column;
+        margin-top: 20px;
+        @include mobile{
+            width: 100%;
+        }
+        
+        form {
+            display: flex;
+            // background-color: red;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px ;
+            width: 70%;
+            margin: 0 auto;
+            
+            .formitem {
+                margin-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                @include mobile{
+                    width: 100%;
+                }
+                label{
+                  margin-bottom: 5px;
+                }
+
+                input {
+                    width: 300px;
+                    margin-bottom: 10px;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    border: none;
+                    border: 1px solid lightgray;
+                    outline: none;
+                    @include mobile {
+                            width: 100%;
+                        }
+
+                }
+
+                textarea {
+                    width: 300px;
+                    border: none;
+                    border: 1px solid lightgray;
+                    @include mobile {
+                            width: 100%;
+                        }
+                }
+                button{
+                    border: $border;
+                    padding: 5px 20px;
+                    border-radius: 20px;
+                    margin: 10px;
+                    background-color: $maincolor;
+
+                }
+            }
+        }
+
+    }
+}

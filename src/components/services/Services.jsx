@@ -3,8 +3,37 @@
 import { Link } from "react-router-dom";
 import { servicesItems } from "../../api/products";
 import "./services.scss"
+import { useState } from "react";
 
 const Services = ()=>{
+  const [currentPage, setCurentPage] = useState(1);
+  const recordPerpage =4;
+  const lastIndex = currentPage * recordPerpage;
+  const firstIndex = lastIndex -recordPerpage;
+  const records = servicesItems.slice(firstIndex, lastIndex);
+  const nPage = Math.ceil(servicesItems.length/recordPerpage);
+  const numbers =[ ...Array(nPage+1).keys()].slice(1)
+
+
+  const handlePrev= ()=>{
+    if(currentPage !== firstIndex){
+      setCurentPage(currentPage - 1)
+
+    }
+  }
+  //handling next functionality 
+  const handleNext = ()=>{
+    if(currentPage !== lastIndex ){
+      setCurentPage(currentPage +1)
+    }
+  }
+
+  //handle change page
+  const handlechangPage = (i)=>{
+    setCurentPage(i)
+
+  }
+
     return (
       <div className="services" id="services">
         <h1>Our services </h1>
@@ -18,7 +47,7 @@ const Services = ()=>{
           <hr />
 
         <div className="serviceswrapper">
-          {servicesItems.map((item) => (
+          {records.map((item) => (
             <Link to={`/servicedetails/${item.id}`} className="serviceitem">
               <img
                 src={
@@ -37,6 +66,14 @@ const Services = ()=>{
             </Link>
           ))}
         </div>
+       
+       <div className="pagination">
+              <button className="prev" onClick={handlePrev} disabled={currentPage === 1}><i className="fa-solid fa-chevron-left"/></button>
+              {numbers.map((i)=>(
+                <span key={i} className={`${currentPage ===i && "active"}`} onClick={()=>handlechangPage(i)}>{i}</span>
+              ))}
+              <button className="next" onClick={handleNext}  disabled={currentPage === 2}><i className="fa-solid fa-chevron-right"/></button>
+       </div>
       </div>
     );
 }

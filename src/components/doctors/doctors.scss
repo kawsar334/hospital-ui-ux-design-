@@ -4,6 +4,7 @@
 .dorctors{
     width: 100%;
     margin: 20px 10px;
+    margin: 20px auto;
 
     h1{
         text-align: center;
@@ -16,7 +17,7 @@
 
     }
     .doctorswrapper{
-        width: 100%;
+        // width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,7 +25,7 @@
         gap: 5px;
 
         .doctorsitem{
-            width: 300px;
+            width: 280px;
             height: 350px;
             position: relative;
             border-radius: 5px;
@@ -52,8 +53,6 @@
             .doctorcontent{
                 position: absolute;
                 bottom: 0;
-                // background-color:rgba(255, 255,255,0.3);
-                background-color: rgba(0,0,0,0.1);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -62,10 +61,11 @@
                 padding: 5px ;
                 text-transform: capitalize;
                 color: rgb(102, 9, 195);
+                background-color: white;
+                border-top: 1px solid $maincolor;
                 .name{
                     font-size: 16px;
                     font-weight: 600;
-                    // color: $teal;
                 }
                 .cat{
                     color: $gray;
@@ -97,5 +97,37 @@
             }
         }
 
+    }
+
+    .pagination{
+        height: 50px;
+        margin: 10px auto;
+        text-align: center;
+        margin-bottom:  20px ;
+        @include mobile{
+            width: 100%;
+        }
+        .next , .prev{
+            border: $border;
+            padding: 5px 10px ;
+            margin: 10px ;
+            cursor: pointer;
+            &:disabled{
+                cursor: not-allowed;
+                color: rgb(157, 142, 142);
+              
+            }
+        }
+        span{
+            font-size: 14px;
+            // border: 1px solid $maincolor;
+            box-shadow: $shadow;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .active{
+            background-color: $maincolor;
+        }
     }
 }

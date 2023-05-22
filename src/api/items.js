@@ -208,4 +208,30 @@ export const doctorsItems =[
         linkdin:"#",
         phone:"28374647"
     },
+    {
+        id: 11,
+        img: "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        name: "Dr. Ayesha Hasina",
+        title: "MBBS, FCPS (Medicine), MD (Rheumatology)",
+        desc: " is a one of the best Dentist in Dhaka. His qualification is BDS (DU), MSS (Clinical) DU, MPH (USA), PGT (Orthodontic), PGT (OMS) BSMMU, Research Fellow & Surgeon (STRC Project, Smile Train, USA), Advanced Implantology (Thailand), Invisalign (Thailand & India), Advance Training in Fixed Orthodontic Braces, Implantology & Laser Dentistry (India). He is a Chief Consultant at Dental View Orthodontics & Implant Center. He is an expert in Dental Implant, Invisalign, Dental Braces, Smile Design, Oral Surgery and Tooth Whitening. He regularly provides treatment to his patients at Dental View Orthodontics & Implant Center from 10am to 9.30pm.",
+        categorie: "Surgery",
+        facebook: "#",
+        instragram: "#",
+        twitter: "#",
+        linkdin: "#",
+        phone: "28374647"
+    },
+    {
+        id: 12,
+        img: "https://images.pexels.com/photos/4270088/pexels-photo-4270088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        name: "Dr. Md. Ariful Islam",
+        title: "MBBS, FCPS (Medicine), MD (Rheumatology)",
+        desc: " is a one of the best Dentist in Dhaka. His qualification is BDS (DU), MSS (Clinical) DU, MPH (USA), PGT (Orthodontic), PGT (OMS) BSMMU, Research Fellow & Surgeon (STRC Project, Smile Train, USA), Advanced Implantology (Thailand), Invisalign (Thailand & India), Advance Training in Fixed Orthodontic Braces, Implantology & Laser Dentistry (India). He is a Chief Consultant at Dental View Orthodontics & Implant Center. He is an expert in Dental Implant, Invisalign, Dental Braces, Smile Design, Oral Surgery and Tooth Whitening. He regularly provides treatment to his patients at Dental View Orthodontics & Implant Center from 10am to 9.30pm.",
+        categorie: "Surgery",
+        facebook: "#",
+        instragram: "#",
+        twitter: "#",
+        linkdin: "#",
+        phone: "28374647"
+    },
 ]

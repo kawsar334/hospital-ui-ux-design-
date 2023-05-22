@@ -54,3 +54,42 @@
     }
 }
 }
+
+
+.pagination {
+    height: 50px;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .next,
+    .prev {
+        border: $border;
+        padding: 5px 10px;
+        margin: 10px;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: not-allowed;
+            color: rgb(157, 142, 142);
+
+        }
+    }
+
+    span {
+        font-size: 14px;
+        // border: 1px solid $maincolor;
+        box-shadow: $shadow;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .active {
+        background-color: $maincolor;
+    }
+}
